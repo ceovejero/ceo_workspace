@@ -1,7 +1,194 @@
-19:59:56 **** Incremental Build of configuration Debug for project 01.EJ1 ****
+21:02:26 **** Build of configuration Debug for project 01.EJ1 ****
 make -j4 all 
 arm-none-eabi-size   01.EJ1.elf 
    text	   data	    bss	    dec	    hex	filename
   11968	     20	   2932	  14920	   3a48	01.EJ1.elf
+Finished building: default.size.stdout
+ 
+21:02:47 **** Incremental Build of configuration Debug for project 01.EJ1 ****
+make -j4 all 
+arm-none-eabi-size   01.EJ1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11968	     20	   2932	  14920	   3a48	01.EJ1.elf
+Finished building: default.size.stdout
+ 
+21:04:51 **** Incremental Build of configuration Debug for project Practice1p1 ****
+make -j4 all 
+arm-none-eabi-size   Practice1p1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11960	     20	   2932	  14912	   3a40	Practice1p1.elf
+Finished building: default.size.stdout
+ 
+21:05:25 **** Incremental Build of configuration Debug for project Practice1p1 ****
+make -j4 all 
+arm-none-eabi-size   Practice1p1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11960	     20	   2932	  14912	   3a40	Practice1p1.elf
+Finished building: default.size.stdout
+ 
+21:07:52 **** Incremental Build of configuration Debug for project Practice1p1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F413xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Practice1p1.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Users\CEO\STM32CubeIDE\ceo_workspace\Practice1p1\STM32F413ZHTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Practice1p1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Practice1p1.elf
+ 
+arm-none-eabi-size   Practice1p1.elf 
+arm-none-eabi-objdump -h -S  Practice1p1.elf  > "Practice1p1.list"
+   text	   data	    bss	    dec	    hex	filename
+  11940	     28	   2932	  14900	   3a34	Practice1p1.elf
+Finished building: default.size.stdout
+ 
+Finished building: Practice1p1.list
+ 
+21:08:02 **** Incremental Build of configuration Debug for project Practice1p1 ****
+make -j4 all 
+arm-none-eabi-size   Practice1p1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11940	     28	   2932	  14900	   3a34	Practice1p1.elf
+Finished building: default.size.stdout
+ 
+21:09:22 **** Incremental Build of configuration Debug for project Practice1p1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F413xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Practice1p1.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Users\CEO\STM32CubeIDE\ceo_workspace\Practice1p1\STM32F413ZHTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Practice1p1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Practice1p1.elf
+ 
+arm-none-eabi-size   Practice1p1.elf 
+arm-none-eabi-objdump -h -S  Practice1p1.elf  > "Practice1p1.list"
+   text	   data	    bss	    dec	    hex	filename
+  11924	     24	   2936	  14884	   3a24	Practice1p1.elf
+Finished building: default.size.stdout
+ 
+Finished building: Practice1p1.list
+ 
+21:27:36 **** Incremental Build of configuration Debug for project Practice1p1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F413xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:109:30: error: 'GPIO_PIN7' undeclared (first use in this function); did you mean 'GPIO_PIN_7'?
+  109 |    HAL_GPIO_TogglePin(GPIOB, GPIO_PIN7);
+      |                              ^~~~~~~~~
+      |                              GPIO_PIN_7
+../Core/Src/main.c:109:30: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+21:28:17 **** Incremental Build of configuration Debug for project Practice1p1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F413xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:109:40: error: expected ')' before ';' token
+  109 |    HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_7;
+      |                                        ^
+../Core/Src/main.c:113:26: error: expected ';' before '}' token
+  113 |    ledPin = (ledPin+1)%3;
+      |                          ^
+      |                          ;
+......
+  120 |   }
+      |   ~                       
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+21:28:48 **** Incremental Build of configuration Debug for project Practice1p1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F413xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:111:10: error: 'GPIO_PIN7' undeclared (first use in this function); did you mean 'GPIO_PIN_7'?
+  111 |    ask = GPIO_PIN7;
+      |          ^~~~~~~~~
+      |          GPIO_PIN_7
+../Core/Src/main.c:111:10: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+21:29:03 **** Incremental Build of configuration Debug for project Practice1p1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F413xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Practice1p1.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Users\CEO\STM32CubeIDE\ceo_workspace\Practice1p1\STM32F413ZHTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Practice1p1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Practice1p1.elf
+ 
+arm-none-eabi-size   Practice1p1.elf 
+arm-none-eabi-objdump -h -S  Practice1p1.elf  > "Practice1p1.list"
+   text	   data	    bss	    dec	    hex	filename
+  11936	     24	   2936	  14896	   3a30	Practice1p1.elf
+Finished building: default.size.stdout
+ 
+Finished building: Practice1p1.list
+ 
+21:29:11 **** Incremental Build of configuration Debug for project Practice1p1 ****
+make -j4 all 
+arm-none-eabi-size   Practice1p1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11936	     24	   2936	  14896	   3a30	Practice1p1.elf
+Finished building: default.size.stdout
+ 
+21:32:11 **** Incremental Build of configuration Debug for project Practice1p1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F413xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Practice1p1.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Users\CEO\STM32CubeIDE\ceo_workspace\Practice1p1\STM32F413ZHTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Practice1p1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Practice1p1.elf
+ 
+arm-none-eabi-size   Practice1p1.elf 
+arm-none-eabi-objdump -h -S  Practice1p1.elf  > "Practice1p1.list"
+   text	   data	    bss	    dec	    hex	filename
+  11948	     28	   2940	  14916	   3a44	Practice1p1.elf
+Finished building: default.size.stdout
+ 
+Finished building: Practice1p1.list
+ 
+21:32:20 **** Incremental Build of configuration Debug for project Practice1p1 ****
+make -j4 all 
+arm-none-eabi-size   Practice1p1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11948	     28	   2940	  14916	   3a44	Practice1p1.elf
+Finished building: default.size.stdout
+ 
+21:34:57 **** Incremental Build of configuration Debug for project Practice1p1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F413xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:50:1: error: unknown type name 'uint8'; did you mean 'uint8_t'?
+   50 | uint8  ledPin=0;
+      | ^~~~~
+      | uint8_t
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+21:35:20 **** Incremental Build of configuration Debug for project Practice1p1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F413xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Practice1p1.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Users\CEO\STM32CubeIDE\ceo_workspace\Practice1p1\STM32F413ZHTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Practice1p1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Practice1p1.elf
+ 
+arm-none-eabi-size   Practice1p1.elf 
+arm-none-eabi-objdump -h -S  Practice1p1.elf  > "Practice1p1.list"
+   text	   data	    bss	    dec	    hex	filename
+  11944	     28	   2932	  14904	   3a38	Practice1p1.elf
+Finished building: default.size.stdout
+ 
+Finished building: Practice1p1.list
+ 
+21:35:38 **** Incremental Build of configuration Debug for project Practice1p1 ****
+make -j4 all 
+arm-none-eabi-size   Practice1p1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11944	     28	   2932	  14904	   3a38	Practice1p1.elf
+Finished building: default.size.stdout
+ 
+21:37:07 **** Incremental Build of configuration Debug for project Practice1p1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F413xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Practice1p1.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Users\CEO\STM32CubeIDE\ceo_workspace\Practice1p1\STM32F413ZHTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Practice1p1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Practice1p1.elf
+ 
+arm-none-eabi-size   Practice1p1.elf 
+arm-none-eabi-objdump -h -S  Practice1p1.elf  > "Practice1p1.list"
+   text	   data	    bss	    dec	    hex	filename
+  11972	     28	   2932	  14932	   3a54	Practice1p1.elf
+Finished building: default.size.stdout
+ 
+Finished building: Practice1p1.list
+ 
+21:37:12 **** Incremental Build of configuration Debug for project Practice1p1 ****
+make -j4 all 
+arm-none-eabi-size   Practice1p1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11972	     28	   2932	  14932	   3a54	Practice1p1.elf
 Finished building: default.size.stdout
  

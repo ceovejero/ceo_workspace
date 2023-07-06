@@ -1,0 +1,19 @@
+20:48:22 **** Incremental Build of configuration Debug for project Practice2p1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F413xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"D:/Users/CEO/STM32CubeIDE/ceo_workspace/Practice2p1/Drivers/BSP" -I"D:/Users/CEO/STM32CubeIDE/ceo_workspace/Practice2p1/Drivers/BSP/STM32F4xx_Nucleo_144" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F413xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"D:/Users/CEO/STM32CubeIDE/ceo_workspace/Practice2p1/Drivers/BSP" -I"D:/Users/CEO/STM32CubeIDE/ceo_workspace/Practice2p1/Drivers/BSP/STM32F4xx_Nucleo_144" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F413xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"D:/Users/CEO/STM32CubeIDE/ceo_workspace/Practice2p1/Drivers/BSP" -I"D:/Users/CEO/STM32CubeIDE/ceo_workspace/Practice2p1/Drivers/BSP/STM32F4xx_Nucleo_144" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+arm-none-eabi-gcc -o "Practice2p1.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Users\CEO\STM32CubeIDE\ceo_workspace\Practice2p1\STM32F413ZHTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Practice2p1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Practice2p1.elf
+ 
+arm-none-eabi-size   Practice2p1.elf 
+arm-none-eabi-objdump -h -S  Practice2p1.elf  > "Practice2p1.list"
+   text	   data	    bss	    dec	    hex	filename
+  12104	     36	   2964	  15104	   3b00	Practice2p1.elf
+Finished building: default.size.stdout
+ 
+Finished building: Practice2p1.list
+ 
+
+20:48:23 Build Finished. 0 errors, 0 warnings. (took 1s.513ms)
+

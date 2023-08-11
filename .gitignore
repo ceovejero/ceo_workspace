@@ -1,3 +1,27 @@
+#settings
+.settings/
+
+#metadata
+.metadata/
+*.pdom
+*.log
+*.pdom
+*.index
+*.ini
+*.cyclo
+
+RemoteSystemsTempFiles/
+.DS_Store
+**/.DS_Store
+**/*.o
+
+#Debug
+**/Debug/
+Debug/
+debug/
+Release/
+release
+
 # Prerequisites
 *.d
 

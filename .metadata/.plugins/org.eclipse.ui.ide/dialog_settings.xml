@@ -1,5 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<list key="installedFeatures">
+		<item value="com.st.stm32cube.common.feature.mx.stinsider:6.9.0.202307051724"/>
+		<item value="com.st.stm32cube.common.feature.mx:6.9.0.202307051724"/>
+		<item value="org.eclipse.cdt.build.crossgcc:11.1.1.202303201356"/>
+		<item value="org.eclipse.cdt.debug.ui.memory:11.1.1.202303201356"/>
+		<item value="org.eclipse.cdt.gdb:11.1.1.202303201356"/>
+		<item value="org.eclipse.cdt.gnu.build:11.1.1.202303201417"/>
+		<item value="org.eclipse.cdt.gnu.debug:11.1.1.202303201356"/>
+		<item value="org.eclipse.cdt.gnu.dsf:11.1.1.202303201356"/>
+		<item value="org.eclipse.cdt.launch.remote:11.1.1.202303201356"/>
+		<item value="org.eclipse.cdt.native:11.1.1.202303201430"/>
+		<item value="org.eclipse.egit.gitflow.feature:5.3.0.201903130848-r"/>
+		<item value="org.eclipse.egit.source:5.3.0.201903130848-r"/>
+		<item value="org.eclipse.egit:5.3.0.201903130848-r"/>
+		<item value="org.eclipse.emf.common:2.29.0.v20230223-0922"/>
+		<item value="org.eclipse.emf.ecore:2.31.0.v20230226-0921"/>
+		<item value="org.eclipse.jgit.gpg.bc:6.6.0.202305301015-r"/>
+		<item value="org.eclipse.jgit.http.apache:6.6.0.202305301015-r"/>
+		<item value="org.eclipse.jgit.lfs:5.3.0.201903130848-r"/>
+		<item value="org.eclipse.jgit.ssh.apache:5.3.0.201903130848-r"/>
+		<item value="org.eclipse.jgit.ssh.jsch:6.6.0.202305301015-r"/>
+		<item value="org.eclipse.jgit:5.3.0.201903130848-r"/>
+		<item value="org.eclipse.rcp:4.27.0.v20230302-0300"/>
+		<item value="org.eclipse.remote.console:11.1.1.202303201356"/>
+		<item value="org.eclipse.remote.serial:11.1.1.202303201356"/>
+		<item value="org.eclipse.remote:11.1.1.202303201356"/>
+		<item value="org.eclipse.tm.terminal.control.feature:11.1.1.202303201356"/>
+		<item value="org.eclipse.userstorage:1.2.0.v20210517-0327"/>
+	</list>
 	<section name="ExternalProjectImportWizard">
 		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
@@ -7,6 +36,7 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="D:\Users\CEO\STM32CubeIDE\ceo_workspace"/>
 			<item value="D:\Users\CEO\STM32CubeIDE\02_SegundoAbeniacar\PdM_SegundoMA-main"/>
 			<item value="D:\Users\CEO\STM32CubeIDE\PdM_ceo_workspace"/>
 		</list>
@@ -30,8 +60,6 @@
 	<section name="WORKBENCH_SETTINGS">
 		<list key="ENABLED_TRANSFERS">
 			<item value="org.eclipse.ui.preferences"/>
-			<item value=""/>
-			<item value=""/>
 		</list>
 	</section>
 </section>

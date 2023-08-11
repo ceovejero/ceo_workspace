@@ -1,16 +1,28 @@
-20:48:22 **** Incremental Build of configuration Debug for project Practice2p1 ****
+19:26:04 **** Incremental Build of configuration Debug for project V3_ds18b20_F413 ****
 make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F413xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"D:/Users/CEO/STM32CubeIDE/ceo_workspace/Practice2p1/Drivers/BSP" -I"D:/Users/CEO/STM32CubeIDE/ceo_workspace/Practice2p1/Drivers/BSP/STM32F4xx_Nucleo_144" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F413xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"D:/Users/CEO/STM32CubeIDE/ceo_workspace/Practice2p1/Drivers/BSP" -I"D:/Users/CEO/STM32CubeIDE/ceo_workspace/Practice2p1/Drivers/BSP/STM32F4xx_Nucleo_144" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
-arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F413xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"D:/Users/CEO/STM32CubeIDE/ceo_workspace/Practice2p1/Drivers/BSP" -I"D:/Users/CEO/STM32CubeIDE/ceo_workspace/Practice2p1/Drivers/BSP/STM32F4xx_Nucleo_144" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
-arm-none-eabi-gcc -o "Practice2p1.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Users\CEO\STM32CubeIDE\ceo_workspace\Practice2p1\STM32F413ZHTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Practice2p1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Practice2p1.elf
+arm-none-eabi-gcc "../Drivers/API/Src/API_usDelay.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F413xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"D:/Users/CEO/STM32CubeIDE/ceo_workspace/V3_ds18b20_F413/Drivers/BSP/STM32F4xx_Nucleo_144" -I"D:/Users/CEO/STM32CubeIDE/ceo_workspace/V3_ds18b20_F413/Drivers/BSP/STM32F4xx_Nucleo_144/_htmresc" -I"D:/Users/CEO/STM32CubeIDE/ceo_workspace/V3_ds18b20_F413/Drivers/API/Inc" -I"D:/Users/CEO/STM32CubeIDE/ceo_workspace/V3_ds18b20_F413/Drivers/API/Src" -I"D:/Users/CEO/STM32CubeIDE/ceo_workspace/V3_ds18b20_F413/Drivers/API" -I"D:/Users/CEO/STM32CubeIDE/ceo_workspace/V3_ds18b20_F413/Drivers" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/API/Src/API_usDelay.d" -MT"Drivers/API/Src/API_usDelay.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/API/Src/API_usDelay.o"
+arm-none-eabi-gcc -o "V3_ds18b20_F413.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Users\CEO\STM32CubeIDE\ceo_workspace\V3_ds18b20_F413\STM32F413ZHTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="V3_ds18b20_F413.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: V3_ds18b20_F413.elf
  
-arm-none-eabi-size   Practice2p1.elf 
-arm-none-eabi-objdump -h -S  Practice2p1.elf  > "Practice2p1.list"
+arm-none-eabi-size   V3_ds18b20_F413.elf 
+arm-none-eabi-objdump -h -S  V3_ds18b20_F413.elf  > "V3_ds18b20_F413.list"
    text	   data	    bss	    dec	    hex	filename
-  12104	     36	   2964	  15104	   3b00	Practice2p1.elf
+  33364	    556	   4276	  38196	   9534	V3_ds18b20_F413.elf
 Finished building: default.size.stdout
  
-Finished building: Practice2p1.list
+Finished building: V3_ds18b20_F413.list
+ 
+20:53:51 **** Incremental Build of configuration Debug for project V3_ds18b20_F413 ****
+make -j4 all 
+arm-none-eabi-gcc "../Drivers/API/Src/API_ds18b20.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F413xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"D:/Users/CEO/STM32CubeIDE/ceo_workspace/V3_ds18b20_F413/Drivers/BSP/STM32F4xx_Nucleo_144" -I"D:/Users/CEO/STM32CubeIDE/ceo_workspace/V3_ds18b20_F413/Drivers/BSP/STM32F4xx_Nucleo_144/_htmresc" -I"D:/Users/CEO/STM32CubeIDE/ceo_workspace/V3_ds18b20_F413/Drivers/API/Inc" -I"D:/Users/CEO/STM32CubeIDE/ceo_workspace/V3_ds18b20_F413/Drivers/API/Src" -I"D:/Users/CEO/STM32CubeIDE/ceo_workspace/V3_ds18b20_F413/Drivers/API" -I"D:/Users/CEO/STM32CubeIDE/ceo_workspace/V3_ds18b20_F413/Drivers" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/API/Src/API_ds18b20.d" -MT"Drivers/API/Src/API_ds18b20.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/API/Src/API_ds18b20.o"
+arm-none-eabi-gcc -o "V3_ds18b20_F413.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Users\CEO\STM32CubeIDE\ceo_workspace\V3_ds18b20_F413\STM32F413ZHTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="V3_ds18b20_F413.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: V3_ds18b20_F413.elf
+ 
+arm-none-eabi-size   V3_ds18b20_F413.elf 
+arm-none-eabi-objdump -h -S  V3_ds18b20_F413.elf  > "V3_ds18b20_F413.list"
+   text	   data	    bss	    dec	    hex	filename
+  33364	    556	   4276	  38196	   9534	V3_ds18b20_F413.elf
+Finished building: default.size.stdout
+ 
+Finished building: V3_ds18b20_F413.list
  

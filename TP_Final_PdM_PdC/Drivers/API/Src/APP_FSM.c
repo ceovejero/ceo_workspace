@@ -44,6 +44,7 @@ static char initMessageRow2[] = "PdM - PdC";
 //static bool_t periodFlag = false;   //Bandera para conmutar entre DOS valores de Periodos
 static delay_t ledTimed;				//Estructura de temporizacion
 static bool_t  inicioUart;
+static uint8_t prevState = INIT_APP_STATE;
 
 
 void APP_FSM_init()
@@ -78,9 +79,12 @@ void APP_FSM_update()
 									 lcd_clear();
 									 lcd_put_cur(0, 0);
 									 lcd_send_string (initMessageRow1);
+
 									 //sprintf(lcdString, "PdM - PdC");
 									 lcd_put_cur(1, 0);
 									 lcd_send_string (initMessageRow2);
+									 while(!delayRead(&delayInitApp))
+									 {}
 
 								sprintf(uartString, "%s\n\r %s\n\r",initMessageRow1,initMessageRow2);
 								uartSendString((uint8_t *) uartString);
@@ -95,20 +99,24 @@ void APP_FSM_update()
 				case DISPLAY_APP_STATE:
 						debounceFSM_update();
 						tempC = ds18b20_read_temp();
-						if (prev_tempC != tempC)
+						if ((prev_tempC != tempC)||(prevState!=DISPLAY_APP_STATE))
 						 	 {
 								prev_tempC = tempC;
-								sprintf(lcdString, "Temp: %3.3f C",tempC);
 								lcd_clear();
 								lcd_put_cur(0, 0);
+								lcd_send_string ("Visualizando:");
+								lcd_put_cur(1, 1);
+								sprintf(lcdString, "Temp: %3.3f C",tempC);
 								lcd_send_string (lcdString);
+								prevState = DISPLAY_APP_STATE;
 						 	 }
-						sprintf(uartString, "Temperatura: %3.2f C\n\r",tempC);
+						sprintf(uartString, "Temp: %3.2f C\n\r",tempC);
 						uartSendString((uint8_t *) uartString);
 
 						if (readKey())  // control de tiempo
 							{// padado el tiempo de
 								actualAppState = GRAPH_APP_STATE;
+
 							}
 							//else // si se detecta estado inestable del pulsador
 							//{
@@ -118,13 +126,16 @@ void APP_FSM_update()
 				case GRAPH_APP_STATE:
 						debounceFSM_update();
 						tempC = ds18b20_read_temp();
-						if (prev_tempC != tempC)
+						if ((prev_tempC != tempC)||(prevState!=GRAPH_APP_STATE))
 							{
 								prev_tempC = tempC;
-								sprintf(lcdString, "Temp: %3.3f C",tempC);
 								lcd_clear();
 								lcd_put_cur(0, 0);
+								lcd_send_string ("Tx Data 4 Graph:");
+								lcd_put_cur(1, 0);
+								sprintf(lcdString, "Temp: %3.3f C",tempC);
 								lcd_send_string (lcdString);
+								prevState = GRAPH_APP_STATE;
 							}
 						sprintf(uartString, "%3.2f\n",tempC);
 						uartSendString((uint8_t *) uartString);
@@ -132,6 +143,7 @@ void APP_FSM_update()
 						if (readKey())  // control de tiempo
 							{// padado el tiempo de
 								actualAppState = DISPLAY_APP_STATE;
+
 							}
 				break;
 				default:

@@ -1,28 +1,14 @@
-19:26:04 **** Incremental Build of configuration Debug for project V3_ds18b20_F413 ****
+21:07:22 **** Incremental Build of configuration Debug for project TP_Final_PdM_PdC ****
 make -j4 all 
-arm-none-eabi-gcc "../Drivers/API/Src/API_usDelay.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F413xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"D:/Users/CEO/STM32CubeIDE/ceo_workspace/V3_ds18b20_F413/Drivers/BSP/STM32F4xx_Nucleo_144" -I"D:/Users/CEO/STM32CubeIDE/ceo_workspace/V3_ds18b20_F413/Drivers/BSP/STM32F4xx_Nucleo_144/_htmresc" -I"D:/Users/CEO/STM32CubeIDE/ceo_workspace/V3_ds18b20_F413/Drivers/API/Inc" -I"D:/Users/CEO/STM32CubeIDE/ceo_workspace/V3_ds18b20_F413/Drivers/API/Src" -I"D:/Users/CEO/STM32CubeIDE/ceo_workspace/V3_ds18b20_F413/Drivers/API" -I"D:/Users/CEO/STM32CubeIDE/ceo_workspace/V3_ds18b20_F413/Drivers" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/API/Src/API_usDelay.d" -MT"Drivers/API/Src/API_usDelay.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/API/Src/API_usDelay.o"
-arm-none-eabi-gcc -o "V3_ds18b20_F413.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Users\CEO\STM32CubeIDE\ceo_workspace\V3_ds18b20_F413\STM32F413ZHTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="V3_ds18b20_F413.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: V3_ds18b20_F413.elf
+arm-none-eabi-gcc "../Drivers/API/Src/APP_FSM.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F413xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"D:/Users/CEO/STM32CubeIDE/ceo_workspace/TP_Final_PdM_PdC/Drivers/BSP/STM32F4xx_Nucleo_144" -I"D:/Users/CEO/STM32CubeIDE/ceo_workspace/TP_Final_PdM_PdC/Drivers/BSP/STM32F4xx_Nucleo_144/_htmresc" -I"D:/Users/CEO/STM32CubeIDE/ceo_workspace/TP_Final_PdM_PdC/Drivers/API/Inc" -I"D:/Users/CEO/STM32CubeIDE/ceo_workspace/TP_Final_PdM_PdC/Drivers/API/Src" -I"D:/Users/CEO/STM32CubeIDE/ceo_workspace/TP_Final_PdM_PdC/Drivers/API" -I"D:/Users/CEO/STM32CubeIDE/ceo_workspace/TP_Final_PdM_PdC/Drivers" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/API/Src/APP_FSM.d" -MT"Drivers/API/Src/APP_FSM.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/API/Src/APP_FSM.o"
+arm-none-eabi-gcc -o "TP_Final_PdM_PdC.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Users\CEO\STM32CubeIDE\ceo_workspace\TP_Final_PdM_PdC\STM32F413ZHTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP_Final_PdM_PdC.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP_Final_PdM_PdC.elf
  
-arm-none-eabi-size   V3_ds18b20_F413.elf 
-arm-none-eabi-objdump -h -S  V3_ds18b20_F413.elf  > "V3_ds18b20_F413.list"
+arm-none-eabi-size   TP_Final_PdM_PdC.elf 
+arm-none-eabi-objdump -h -S  TP_Final_PdM_PdC.elf  > "TP_Final_PdM_PdC.list"
    text	   data	    bss	    dec	    hex	filename
-  33364	    556	   4276	  38196	   9534	V3_ds18b20_F413.elf
+  34028	    604	   4332	  38964	   9834	TP_Final_PdM_PdC.elf
 Finished building: default.size.stdout
  
-Finished building: V3_ds18b20_F413.list
- 
-20:53:51 **** Incremental Build of configuration Debug for project V3_ds18b20_F413 ****
-make -j4 all 
-arm-none-eabi-gcc "../Drivers/API/Src/API_ds18b20.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F413xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"D:/Users/CEO/STM32CubeIDE/ceo_workspace/V3_ds18b20_F413/Drivers/BSP/STM32F4xx_Nucleo_144" -I"D:/Users/CEO/STM32CubeIDE/ceo_workspace/V3_ds18b20_F413/Drivers/BSP/STM32F4xx_Nucleo_144/_htmresc" -I"D:/Users/CEO/STM32CubeIDE/ceo_workspace/V3_ds18b20_F413/Drivers/API/Inc" -I"D:/Users/CEO/STM32CubeIDE/ceo_workspace/V3_ds18b20_F413/Drivers/API/Src" -I"D:/Users/CEO/STM32CubeIDE/ceo_workspace/V3_ds18b20_F413/Drivers/API" -I"D:/Users/CEO/STM32CubeIDE/ceo_workspace/V3_ds18b20_F413/Drivers" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/API/Src/API_ds18b20.d" -MT"Drivers/API/Src/API_ds18b20.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/API/Src/API_ds18b20.o"
-arm-none-eabi-gcc -o "V3_ds18b20_F413.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Users\CEO\STM32CubeIDE\ceo_workspace\V3_ds18b20_F413\STM32F413ZHTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="V3_ds18b20_F413.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: V3_ds18b20_F413.elf
- 
-arm-none-eabi-size   V3_ds18b20_F413.elf 
-arm-none-eabi-objdump -h -S  V3_ds18b20_F413.elf  > "V3_ds18b20_F413.list"
-   text	   data	    bss	    dec	    hex	filename
-  33364	    556	   4276	  38196	   9534	V3_ds18b20_F413.elf
-Finished building: default.size.stdout
- 
-Finished building: V3_ds18b20_F413.list
+Finished building: TP_Final_PdM_PdC.list
  

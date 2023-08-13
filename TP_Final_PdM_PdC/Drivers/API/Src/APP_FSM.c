@@ -58,7 +58,7 @@ void APP_FSM_init()
 
 		  lcd_begin ();
 		  lcd_init ();
-		  DWT_Delay_Init();
+		  delayUS_DWT_Init();
 
 		  inicioUart = uartInit();			//inicializacion de la uart y captura de inicializacion correcta/incorrecta
 		  if (!inicioUart)

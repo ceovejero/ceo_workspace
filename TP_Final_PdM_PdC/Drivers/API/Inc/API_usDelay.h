@@ -29,7 +29,7 @@
 
 #define DWT_DELAY_NEWBIE 0
 
-void DWT_Delay_Init(void);
-void DWT_Delay_us(uint32_t us);
+void delayUS_DWT_Init(void);
+void delayUS_DWT(uint32_t us);
 
 #endif /* INC_DWT_DELAY_DWT_DELAY_H_ */

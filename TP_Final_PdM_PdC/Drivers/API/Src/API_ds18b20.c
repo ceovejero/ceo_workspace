@@ -105,20 +105,20 @@ uint8_t ds18b20_init (void)
 
 	gpio_set_output ();   // set the pin as output
 	HAL_GPIO_WritePin (COMM_PORT, COMM_PIN, LOW);  // pull the pin low
-	DWT_Delay_us (MASTER_Tx_RESET_PULSE);   // 480 uS delay according to datasheet
+	delayUS_DWT (MASTER_Tx_RESET_PULSE);   // 480 uS delay according to datasheet
 
 	gpio_set_input ();    // set the pin as input
-	DWT_Delay_us (MASTER_WAIT_FOR_PRESENCE);    // 80 uS delay, FOR pRESENCE, according to datasheet
+	delayUS_DWT (MASTER_WAIT_FOR_PRESENCE);    // 80 uS delay, FOR pRESENCE, according to datasheet
 
 	if (!(HAL_GPIO_ReadPin (COMM_PORT, COMM_PIN)))    // if the pin is low i.e the presence pulse is there
 	{
-		DWT_Delay_us (MASTER_WAIT_FOR_END_PRESENCE_PULSE);  // wait for 400 us
+		delayUS_DWT (MASTER_WAIT_FOR_END_PRESENCE_PULSE);  // wait for 400 us
 		return 0;
 	}
 
 	else
 	{
-		DWT_Delay_us (MASTER_WAIT_FOR_END_PRESENCE_PULSE);
+		delayUS_DWT (MASTER_WAIT_FOR_END_PRESENCE_PULSE);
 		return 1;
 	}
 }
@@ -136,10 +136,10 @@ void ds18b20_write_cmd (uint8_t data)
 
 			gpio_set_output ();  // set as output
 			HAL_GPIO_WritePin (COMM_PORT, COMM_PIN, LOW);  // pull the pin LOW
-			DWT_Delay_us (1);  // wait for  us
+			delayUS_DWT (1);  // wait for  us
 
 			gpio_set_input ();  // set as input
-			DWT_Delay_us (60);  // wait for 60 us
+			delayUS_DWT (60);  // wait for 60 us
 		}
 
 		else  // if the bit is low
@@ -148,7 +148,7 @@ void ds18b20_write_cmd (uint8_t data)
 
 			gpio_set_output ();
 			HAL_GPIO_WritePin (COMM_PORT, COMM_PIN, LOW);  // pull the pin LOW
-			DWT_Delay_us (60);  // wait for 60 us
+			delayUS_DWT (60);  // wait for 60 us
 
 			gpio_set_input ();
 		}
@@ -166,34 +166,17 @@ uint8_t ds18b20_read (void)
 		gpio_set_output ();   // set as output
 
 		HAL_GPIO_WritePin (COMM_PORT, COMM_PIN, LOW);  // pull the data pin LOW
-		DWT_Delay_us (2);  // wait for 2 us
+		delayUS_DWT (2);  // wait for 2 us
 
 		gpio_set_input ();  // set as input
 		if (HAL_GPIO_ReadPin (COMM_PORT, COMM_PIN))  // if the pin is HIGH
 		{
 			value |= 1<<i;  // read = 1
 		}
-		DWT_Delay_us (60);  // wait for 60 us
+		delayUS_DWT (60);  // wait for 60 us
 	}
 	return value;
 }
 
 
 
-
-/*
-	check = ds18b20_init ();
-	ds18b20_write_cmd (0xCC);  // skip ROM
-	ds18b20_write_cmd (0x44);  // convert t
-
-	HAL_Delay (800);
-
-	ds18b20_init ();
-	ds18b20_write_cmd (0xCC);  // skip ROM
-	ds18b20_write_cmd (0xBE);  // Read Scratchpad
-
-	temp_l = ds18b20_read();
-	temp_h = ds18b20_read();
-	temp = (temp_h<<8)|temp_l;
-	temperature = (float)temp/16;
-*/

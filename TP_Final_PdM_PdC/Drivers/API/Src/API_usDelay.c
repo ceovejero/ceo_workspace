@@ -21,12 +21,13 @@
  * You might need to enable access to DWT registers on Cortex-M7
  *   DWT->LAR = 0xC5ACCE55
  */
-void DWT_Delay_Init(void)
+void delayUS_DWT_Init(void)
 {
     if (!(CoreDebug->DEMCR & CoreDebug_DEMCR_TRCENA_Msk))
     {
-        CoreDebug->DEMCR |= CoreDebug_DEMCR_TRCENA_Msk;
-        //DWT->CYCCNT = 0;  // reset the counter
+        // (DEMCR) Debug Exception and Monitor Control Register
+    	// (TRCENA = tracing enable) This enables control of power usage unless tracing is required.
+    	CoreDebug->DEMCR |= CoreDebug_DEMCR_TRCENA_Msk;
         DWT->CTRL |= DWT_CTRL_CYCCNTENA_Msk; // DWT_CTRL_CYCCNT ENA_Msk equals: enable the counter
         DWT->CYCCNT = 0;  // reset the counter
     }
@@ -34,7 +35,7 @@ void DWT_Delay_Init(void)
 
 
 /**
- * Delay routine itself.
+ * Delay routine.
  * Time is in microseconds (1/1000000th of a second), not to be
  * confused with millisecond (1/1000th).
  *
@@ -42,7 +43,7 @@ void DWT_Delay_Init(void)
  *
  * @param uint32_t us  Number of microseconds to delay for
  */
-void DWT_Delay_us(uint32_t us) // microseconds
+void delayUS_DWT(uint32_t us) // microseconds
 {
     uint32_t startTick = DWT->CYCCNT,
              delayTicks = us * (SystemCoreClock/1000000);

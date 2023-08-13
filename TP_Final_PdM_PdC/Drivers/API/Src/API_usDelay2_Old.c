@@ -1,6 +1,11 @@
 /*
  * Simple microseconds delay routine, utilizing ARM's DWT
  * (Data Watchpoint and Trace Unit) and HAL library.
+ * Intended to use with gcc compiler, but I hope it can be used
+ * with any other C compiler across the Universe (provided that
+ * ARM and CMSIS already invented) :)
+ * Max K
+ *
  *
  * This file is part of DWT_Delay package.
  * DWT_Delay is free software: you can redistribute it and/or modify it
@@ -8,9 +13,11 @@
  * the Free Software Foundation, either version 3 of the License,
  * or (at your option) any later version.
  *
- * Based on Mastering "Mastering STM32 – Carmine Noviello"
- *
- *
+ * us_delay is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty
+ * of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See
+ * the GNU General Public License for more details.
+ * http://www.gnu.org/licenses/.
  */
 
 #include "API_header.h"          // change to whatever MCU you use
@@ -32,7 +39,30 @@ void DWT_Delay_Init(void)
     }
 }
 
+#if DWT_DELAY_NEWBIE
+/**
+ * If you are a newbie and see magic in DWT_Delay, consider this more
+ * illustrative function, where you explicitly determine a counter
+ * value when delay should stop while keeping things in bounds of uint32.
+*/
+void DWT_Delay_us(uint32_t us) // microseconds
+{
+    uint32_t startTick  = DWT->CYCCNT,
+             targetTick = DWT->CYCCNT + us * (SystemCoreClock/1000000);
 
+    // Must check if target tick is out of bounds and overflowed
+    if (targetTick > startTick)
+    {
+        // Not overflowed
+        while (DWT->CYCCNT < targetTick);
+    }
+    else
+    {
+        // Overflowed
+        while (DWT->CYCCNT > startTick || DWT->CYCCNT < targetTick);
+    }
+}
+#else
 /**
  * Delay routine itself.
  * Time is in microseconds (1/1000000th of a second), not to be
@@ -50,3 +80,4 @@ void DWT_Delay_us(uint32_t us) // microseconds
     while (DWT->CYCCNT - startTick < delayTicks);
 }
 
+#endif

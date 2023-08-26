@@ -1,14 +1,14 @@
-16:34:10 **** Incremental Build of configuration Debug for project TP_Final_PdM_PdC ****
+11:17:51 **** Build of configuration Debug for project TP_Final_PdM_PdC ****
 make -j4 all 
-arm-none-eabi-gcc "../Drivers/API/Src/APP_FSM.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F413xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"D:/Users/CEO/STM32CubeIDE/ceo_workspace/TP_Final_PdM_PdC/Drivers/BSP/STM32F4xx_Nucleo_144" -I"D:/Users/CEO/STM32CubeIDE/ceo_workspace/TP_Final_PdM_PdC/Drivers/BSP/STM32F4xx_Nucleo_144/_htmresc" -I"D:/Users/CEO/STM32CubeIDE/ceo_workspace/TP_Final_PdM_PdC/Drivers/API/Inc" -I"D:/Users/CEO/STM32CubeIDE/ceo_workspace/TP_Final_PdM_PdC/Drivers/API/Src" -I"D:/Users/CEO/STM32CubeIDE/ceo_workspace/TP_Final_PdM_PdC/Drivers/API" -I"D:/Users/CEO/STM32CubeIDE/ceo_workspace/TP_Final_PdM_PdC/Drivers" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/API/Src/APP_FSM.d" -MT"Drivers/API/Src/APP_FSM.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/API/Src/APP_FSM.o"
-arm-none-eabi-gcc -o "TP_Final_PdM_PdC.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Users\CEO\STM32CubeIDE\ceo_workspace\TP_Final_PdM_PdC\STM32F413ZHTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP_Final_PdM_PdC.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: TP_Final_PdM_PdC.elf
- 
 arm-none-eabi-size   TP_Final_PdM_PdC.elf 
-arm-none-eabi-objdump -h -S  TP_Final_PdM_PdC.elf  > "TP_Final_PdM_PdC.list"
    text	   data	    bss	    dec	    hex	filename
-  34156	    604	   4332	  39092	   98b4	TP_Final_PdM_PdC.elf
+  34196	    604	   4332	  39132	   98dc	TP_Final_PdM_PdC.elf
 Finished building: default.size.stdout
  
-Finished building: TP_Final_PdM_PdC.list
+11:18:08 **** Incremental Build of configuration Debug for project TP_Final_PdM_PdC ****
+make -j4 all 
+arm-none-eabi-size   TP_Final_PdM_PdC.elf 
+   text	   data	    bss	    dec	    hex	filename
+  34196	    604	   4332	  39132	   98dc	TP_Final_PdM_PdC.elf
+Finished building: default.size.stdout
  
